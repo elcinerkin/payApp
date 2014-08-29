@@ -1,0 +1,60 @@
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+		<div class="col-lg-8">
+			<div class="panel panel-default" ng-controller="ActivityCtrl">
+    			<div class="container-fluid">
+			        <section class="panel">
+			            <header class="panel-heading">
+			          		Transaction History
+			        	</header>
+			        	<table class="table table-striped">
+			          		<thead>
+					            <tr>
+					            	<th>Date</th>
+					            	<th>Activity</th>
+					            	<th>Amount</th>
+					          	</tr>
+					        </thead>
+					        <tbody ng-repeat='item in activity'>
+					            <tr>
+					              <td>{{item.date}}</td>
+					              <td>{{item.type}}</td>
+					              <td>{{item.amount}}</td>
+					            </tr>
+					        </tbody>
+					    </table>
+					</section>
+				</div>
+			</div>
+		</div>
+
+        <div class="col-lg-4">
+			<div class="panel panel-default" ng-controller="CurrencyCtrl">
+			    <div class="container-fluid">
+			    	<section class="panel">
+			      		<header class="panel-heading">
+			        		Currency Converter
+			      		</header>
+			      		<div class="row">
+			          		<section class="panel">
+			            		<div class="panel-body">
+			                		<div class="form-group">
+			                  			<form name="input" role="form">
+			                  			Amount: <input type="number" size="6" min="0" max="1000000" class="form-control" name="amount" placeholder="Enter an amount" ng-model="amount" required><br>
+			                  			Current currency: <input type="text" class="form-control" name="from" placeholder="Enter a currency" ng-model="from" required><br>
+			                  			Desired currency: <input type="text" class="form-control" name="to" placeholder="Enter the new currency" ng-model="to" required><br>
+			                  			Get updated results:<input type="checkbox" name="option" ng-true-value="true" ng-false-value="false" ng-model="option"><br>
+			                  			<input type="submit" value="Submit" class="btn btn-info" ng-click="getCurrency()">
+			                  			<h3 ng-if="result">Result: {{result.result}}</h3>
+			                		</div>
+			              		</form>
+			            	</div>
+			          	</section>
+			      	</div>
+			    </section>
+			</div>
+		</div>
+    </div>
+</section>
+</section>

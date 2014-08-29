@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PayPal App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="libs/bootstrap-css-only/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap-reset.css" rel="stylesheet">
+    
+    <!--External css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/style-responsive.css" rel="stylesheet" />
+  </head>
+
+  <body  ng-app="myApp" class="full-width">
+  <body class="full-width">
+    
+  <section id="container" class="">
+    <!--header start-->
+    <header class="header white-bg">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="fa fa-bar"></span>
+          <span class="fa fa-bar"></span>
+          <span class="fa fa-bar"></span>
+        </button>
+
+        <!--logo start-->
+        <a href="#/home" class="logo" color="blue">Pay<span color="navy">Pal</span></a>
+        <!--logo end-->
+        <div class="horizontal-menu navbar-collapse collapse ">
+          <ul class="nav navbar-nav">
+            <li><a href="#/home"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#/transactions">Transactions</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!--header end-->
+
+    <div ui-view></div>
+
+  </section>
+
+  <!--footer start-->
+  <footer class="site-footer">
+    <div class="text-center">
+        2014 &copy; Elcin Erkin.
+    </div>
+  </footer>
+  <!--footer end-->
+
+  <!-- JS -->
+  <script src="libs/angular/angular.js"></script>
+  <script src="libs/angular-resource/angular-resource.js"></script>
+  <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="libs/underscore/underscore.js"></script>
+  <script src="libs/underscore.string/lib/underscore.string.js"></script>
+  <script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="main.js"></script>
+
+  <!-- Controllers -->
+  <script src="js/Controllers/homeCtrl.js"></script>
+  <script src="js/Controllers/activityCtrl.js"></script>
+  <script src="js/Controllers/currencyCtrl.js"></script>
+
+  </body>
+</html>
