@@ -1,4 +1,0 @@
-payApp
-======
-
-Currency Converter
